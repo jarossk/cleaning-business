@@ -12,12 +12,22 @@
 </head>
 <body>
   <div class="header">
-    <button class="js-menu header__menu-toggle material-icons">menu</button>
+    <button class="js-menu-show header__menu-toggle material-icons">menu</button>
   </div>
 
-  <aside class="side-nav">
-    <nav class="side-nav__container">
-
+  <aside class="js-side-nav side-nav">
+    <nav class="js-side-nav-container side-nav__container">
+      <button class="js-menu-hide side-nav__hide material-icons">close</button>
+        <header class="side-nav__header">
+            Side Nav
+        </header>
+        <ul class="side-nav__content">
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+            <li>Five</li>
+        </ul>
     </nav>
   </aside>
 
