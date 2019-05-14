@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Anton');
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhai');
+
 * {
     box-sizing: border-box;
 }
@@ -7,18 +10,32 @@ html, body {
     margin: 0;
     background: #FAFAFA;
     font-family: Arial, sans-serif;
+    height: 100%;
 }
 
-.header {
+body {
+    display: grid;
+    grid-template-rows: 3.5rem auto fit-content(8rem);
+    grid-template-areas: "header"
+                         "main"
+                         "footer";
+}
+
+.main-header {
     width: 100%;
-    height: 56px;
+    /* height: 56px; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    grid-area: header;
+    padding: 0.5rem 1rem;
     box-shadow: 0 2px 4px rgba(2, 2, 124, 0.829);
-    background: rgba(2, 2, 99, 0.829);
-    color: #FFF;
+    background: rgba(121, 121, 255, 0.479);
+    /* color: #000; */
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0 16px;
+    justify-content: space-between;
 }
 
 .header__menu-toggle {
@@ -28,7 +45,50 @@ html, body {
     height: 24px;
     padding: 0;
     margin: 0;
-    color: #FFF;
+    color: #000;
+    vertical-align: middle;
+}
+
+.main-header__brand {
+    text-decoration: none;
+}
+
+.main-header__brand img {
+    height: 3rem;
+    vertical-align: middle;
+}
+
+.main-header__name {
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle;
+    font-family: 'Baloo Bhai';
+    color: rgba(58, 58, 187, 0.925);
+}
+
+.main-header__media {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    /* margin: 0 0.5rem; */
+
+}
+
+.main-header__media a {
+    color: rgb(26, 9, 128);
+    padding-right: 1rem;
+    display: inline-block;
+    /* vertical-align: middle; */
+}
+
+.main-header__media-call {
+    padding: 0 2rem;
+}
+
+.media-call-icon {
+    font-size: 1.4rem;
+    
+
 }
 
 .side-nav {
@@ -125,4 +185,15 @@ html, body {
 
 .side-nav__content li:hover {
     background: #CCC;
+}
+
+main {
+    grid-area: main;
+}
+
+.main-footer {
+    background: black;
+    padding: 2rem;
+    margin-top: 3rem;
+    grid-area: footer;
 }
